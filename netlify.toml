@@ -1,0 +1,15 @@
+[build]
+publish = "."
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+from = "https://www.earthlycravings.com/*"
+to = "https://earthlycravings.com/:splat"
+status = 301
+force = true

@@ -1,0 +1,134 @@
+{
+  "site": {
+    "title": "Earthly Cravings",
+    "canonicalUrl": "https://earthlycravings.com/",
+    "description": "Earthly Cravings is a family brand for allergy-friendly recipes, garden notes, home wellness, and practical product recommendations.",
+    "socialDescription": "Allergy-friendly family meals, garden rhythms, and home products that earn their place in real life.",
+    "instagram": "https://www.instagram.com/earthlycravings3/",
+    "assets": {
+      "mark": "assets/earthly-cravings-mark.svg",
+      "hero": "assets/earthly-cravings-hero-still-life.png"
+    }
+  },
+  "navigation": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Recipes", "href": "#recipes" },
+    { "label": "Roots", "href": "#roots" },
+    { "label": "Products", "href": "#products" },
+    { "label": "Instagram", "href": "#instagram" },
+    { "label": "Disclosure", "href": "#disclosure" }
+  ],
+  "sections": [
+    {
+      "id": "home",
+      "type": "hero",
+      "heading": "Earthly Cravings",
+      "body": "Allergy-friendly food. Garden-fresh living. Practical picks for a nourishing, rooted home.",
+      "actions": [
+        { "label": "Start with recipes", "href": "#recipes" },
+        { "label": "See products we use", "href": "#products" }
+      ],
+      "image": {
+        "src": "assets/earthly-cravings-hero-still-life.png",
+        "alt": "Fresh allergy-friendly food on a bright kitchen table"
+      }
+    },
+    {
+      "id": "about",
+      "kicker": "About",
+      "heading": "A family kitchen, garden, and home journal",
+      "body": "Earthly Cravings is the public home for allergy-friendly food, garden experiments, home wellness, and the practical products that make family life easier.",
+      "cards": [
+        {
+          "heading": "Public voice",
+          "body": "Recipes, garden notes, product picks, and small field reports can live here where friends and family can follow along."
+        },
+        {
+          "heading": "Private tools",
+          "body": "Meal plans, shopping lists, bed care logs, and project details stay inside FamilyOS Earthly Food, Roots, and Create."
+        }
+      ]
+    },
+    {
+      "id": "recipes",
+      "kicker": "Recipes & Food",
+      "heading": "Simple food that can survive a real week",
+      "body": "Keep the food lane practical: simple dinners, allergy notes, family reactions, grocery handoffs, and the recipes worth repeating.",
+      "cards": [
+        {
+          "label": "01",
+          "heading": "Weeknight notes",
+          "body": "What worked, what needs swapping, and what made it onto plates."
+        },
+        {
+          "label": "02",
+          "heading": "Ingredient swaps",
+          "body": "Gluten-free and allergy-friendly versions with brands that held up."
+        }
+      ]
+    },
+    {
+      "id": "roots",
+      "kicker": "Roots & Garden",
+      "heading": "Garden beds, seasonal memory, and small wins",
+      "body": "Earthly Roots can become the visible garden journal while the private app keeps bed inventory, care logs, and planting plans organized.",
+      "items": [
+        "What was planted and when.",
+        "What grew, failed, or needs another try.",
+        "Which harvests turned into family meals."
+      ]
+    },
+    {
+      "id": "products",
+      "kicker": "Products We Use",
+      "heading": "Practical picks, clearly labeled",
+      "body": "The product lane should stay honest: pantry staples, kitchen tools, garden supplies, home wellness favorites, and future partner targets clearly labeled.",
+      "cards": [
+        {
+          "heading": "Kitchen staples",
+          "body": "Gluten-free basics, pantry helpers, and reliable swaps."
+        },
+        {
+          "heading": "Garden helpers",
+          "body": "Seed starting, soil care, irrigation, labels, and tools."
+        },
+        {
+          "heading": "Home wellness",
+          "body": "Clean-home products and brands to evaluate before any relationship claim."
+        }
+      ],
+      "guardrails": [
+        {
+          "heading": "No paid links are live yet",
+          "body": "Product notes stay draft-only until family use, disclosure placement, and a separate Earthly Cravings tracking path are verified."
+        },
+        {
+          "heading": "Use before linking",
+          "body": "Every recommendation should have a real-use note, a reviewer, and a disclosure decision before it becomes public."
+        },
+        {
+          "heading": "Future partner targets stay labeled",
+          "body": "Rowe Casa and similar brands remain evaluation or future-target language until an official relationship is documented."
+        }
+      ]
+    },
+    {
+      "id": "instagram",
+      "kicker": "Instagram",
+      "heading": "From our table and our garden",
+      "body": "Revive @earthlycravings3 as the lightweight field journal for meals, garden wins, product notes, and dining finds.",
+      "action": {
+        "label": "Follow @earthlycravings3",
+        "href": "https://www.instagram.com/earthlycravings3/"
+      },
+      "storyPrompts": ["Meals", "Garden", "Pantry", "Home"]
+    },
+    {
+      "id": "disclosure",
+      "kicker": "Disclosure",
+      "heading": "Affiliate disclosure",
+      "body": "Some future links may be affiliate links, which means Earthly Cravings may earn a small commission if you buy through them. Recommendations should remain based on actual use, careful evaluation, and clear labeling. Rowe Casa and other brands should be described as future partner targets unless an official relationship is approved and active."
+    }
+  ]
+}

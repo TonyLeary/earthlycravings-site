@@ -1,0 +1,744 @@
+:root {
+  --bg: #ffffff;
+  --ink: #073a32;
+  --ink-soft: #29564c;
+  --muted: #66766f;
+  --line: #dce8e0;
+  --leaf: #0e6d53;
+  --leaf-dark: #003f36;
+  --leaf-deep: #002d29;
+  --moss: #7a8a28;
+  --mint: #edf8f0;
+  --citrus: #f4b942;
+  --coral: #dc624b;
+  --petal: #fff2ee;
+  --sand: #f8f6f0;
+  --shadow: 0 22px 54px rgba(7, 58, 50, 0.14);
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+#about,
+#recipes,
+#roots,
+#products,
+#instagram,
+#disclosure {
+  scroll-margin-top: 104px;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--leaf-dark);
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 18px;
+  font-size: clamp(3.45rem, 5.8vw, 5.25rem);
+  line-height: 0.95;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
+  line-height: 0.98;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 76px;
+  padding: 12px clamp(20px, 5vw, 72px);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(220, 232, 224, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 12px;
+  color: var(--leaf-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.32rem, 2vw, 1.82rem);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.brand img {
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(14px, 2vw, 30px);
+  color: #123f37;
+  font-size: 0.9rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.site-nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+  left: 0;
+  height: 2px;
+  background: var(--moss);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hero-section {
+  min-height: clamp(470px, 60vh, 640px);
+  display: flex;
+  align-items: center;
+  padding: clamp(58px, 7vw, 92px) clamp(20px, 9vw, 132px);
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 31%, rgba(255, 255, 255, 0.34) 55%, rgba(255, 255, 255, 0) 72%),
+    url("./assets/earthly-cravings-hero-still-life.png");
+  background-position: right center;
+  background-size: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.hero-lede {
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: #253f38;
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 0.94rem;
+  font-weight: 850;
+  text-decoration: none;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible,
+.text-link:hover,
+.text-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--leaf-dark);
+  color: #ffffff;
+  box-shadow: 0 16px 30px rgba(0, 63, 54, 0.24);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(0, 63, 54, 0.4);
+  color: var(--leaf-dark);
+}
+
+.section-kicker {
+  margin-bottom: 13px;
+  color: var(--coral);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-section,
+.editorial-section,
+.products-section,
+.instagram-section,
+.disclosure-section {
+  padding: clamp(58px, 8vw, 106px) clamp(20px, 6vw, 86px);
+}
+
+.about-section {
+  background: #ffffff;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(320px, 1.04fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: start;
+}
+
+.about-copy {
+  max-width: 750px;
+}
+
+.about-copy p,
+.editorial-copy p,
+.products-copy p,
+.instagram-copy p,
+.disclosure-section p,
+.footer-boundary,
+.footer-brand span {
+  color: var(--muted);
+}
+
+.about-copy p,
+.editorial-copy > p,
+.products-copy p {
+  font-size: clamp(1.04rem, 1.6vw, 1.22rem);
+}
+
+.boundary-list {
+  display: grid;
+  gap: 14px;
+}
+
+.boundary-list article {
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--leaf);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(7, 58, 50, 0.07);
+}
+
+.boundary-list article:nth-child(2) {
+  border-left-color: var(--coral);
+}
+
+.boundary-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.editorial-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(30px, 6vw, 86px);
+  align-items: center;
+}
+
+.editorial-food {
+  background: var(--sand);
+}
+
+.editorial-roots {
+  background: var(--mint);
+}
+
+.editorial-copy {
+  max-width: 760px;
+}
+
+.image-panel {
+  min-height: clamp(330px, 40vw, 520px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background-image: url("./assets/earthly-cravings-hero-still-life.png");
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.image-panel-food {
+  background-position: 57% center;
+}
+
+.mini-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.mini-list article {
+  min-height: 170px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.mini-list span {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--moss);
+  font-weight: 900;
+}
+
+.mini-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.roots-visual {
+  position: relative;
+  min-height: clamp(340px, 38vw, 500px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #ffffff, #e3f4e5 72%), var(--mint);
+  box-shadow: var(--shadow);
+}
+
+.bed,
+.sun {
+  position: absolute;
+  display: block;
+}
+
+.bed {
+  left: 12%;
+  width: 76%;
+  height: 58px;
+  border-radius: 99px;
+  background: #7b5235;
+  transform: skewY(-8deg);
+}
+
+.bed-one {
+  bottom: 96px;
+}
+
+.bed-two {
+  bottom: 162px;
+}
+
+.bed-three {
+  bottom: 228px;
+}
+
+.bed::before,
+.bed::after {
+  position: absolute;
+  top: -36px;
+  width: 34px;
+  height: 50px;
+  border-radius: 100% 0 100% 0;
+  background: var(--leaf);
+  content: "";
+}
+
+.bed::before {
+  left: 23%;
+  rotate: -14deg;
+}
+
+.bed::after {
+  right: 25%;
+  rotate: 32deg;
+}
+
+.sun {
+  top: 42px;
+  right: 48px;
+  width: 74px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--citrus);
+}
+
+.clean-list {
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clean-list li {
+  position: relative;
+  margin-top: 12px;
+  padding-left: 30px;
+  color: var(--ink-soft);
+  font-weight: 800;
+}
+
+.clean-list li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--coral);
+  content: "";
+}
+
+.products-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 42%, var(--petal) 42%, var(--petal) 100%);
+}
+
+.products-copy {
+  max-width: 530px;
+}
+
+.product-shelf {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.product-shelf article {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  border: 1px solid rgba(220, 232, 224, 0.78);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 44px rgba(7, 58, 50, 0.08);
+}
+
+.product-shelf article:nth-child(1) {
+  background: linear-gradient(180deg, #ffffff, #fff6ef);
+}
+
+.product-shelf article:nth-child(2) {
+  background: linear-gradient(180deg, #ffffff, #edf8f0);
+}
+
+.product-shelf article:nth-child(3) {
+  background: linear-gradient(180deg, #ffffff, #edf7f8);
+}
+
+.product-shelf p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.product-gate {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.product-gate article {
+  min-height: 150px;
+  padding: 18px 20px;
+  border: 1px solid rgba(0, 63, 54, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.product-gate span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--leaf-dark);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.product-gate p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.instagram-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: center;
+  background: #ffffff;
+}
+
+.instagram-copy {
+  max-width: 520px;
+}
+
+.instagram-copy a {
+  color: var(--leaf);
+  font-weight: 800;
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--coral);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: transform 160ms ease;
+}
+
+.story-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.story-strip article {
+  min-height: clamp(150px, 16vw, 220px);
+  display: flex;
+  align-items: end;
+  padding: 16px;
+  border-radius: 8px;
+  color: #ffffff;
+  background-image:
+    linear-gradient(180deg, rgba(0, 63, 54, 0.08), rgba(0, 45, 41, 0.78)),
+    url("./assets/earthly-cravings-hero-still-life.png");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.story-strip article:nth-child(1) {
+  background-position: 50% center;
+}
+
+.story-strip article:nth-child(2) {
+  background-position: 78% center;
+}
+
+.story-strip article:nth-child(3) {
+  background-position: 36% center;
+}
+
+.story-strip article:nth-child(4) {
+  background-position: 88% center;
+}
+
+.story-strip span {
+  font-weight: 900;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.disclosure-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(24px, 5vw, 70px);
+  background: #f7fbf8;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.disclosure-section p {
+  max-width: 900px;
+  margin-bottom: 0;
+  font-size: 1.04rem;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(180px, 0.55fr) minmax(260px, 0.85fr);
+  gap: clamp(26px, 5vw, 70px);
+  align-items: start;
+  padding: clamp(34px, 6vw, 64px) clamp(20px, 6vw, 86px);
+  background: var(--leaf-deep);
+  color: #ffffff;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.footer-brand img {
+  flex: 0 0 auto;
+}
+
+.footer-brand p {
+  margin-bottom: 6px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.6rem;
+}
+
+.footer-brand span,
+.footer-boundary {
+  display: block;
+  color: #c9ddd5;
+}
+
+.footer-nav {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-nav a {
+  color: #effaf5;
+  text-decoration: none;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--citrus);
+}
+
+.footer-boundary {
+  margin: 0;
+}
+
+@media (max-width: 1080px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .hero-section {
+    min-height: 560px;
+    background-position: 61% center;
+  }
+
+  .about-layout,
+  .editorial-section,
+  .products-section,
+  .instagram-section,
+  .disclosure-section,
+  .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-roots .roots-visual {
+    order: -1;
+  }
+
+  .products-section {
+    background: var(--petal);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    min-height: auto;
+    padding: 12px 18px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    overflow-x: visible;
+    font-size: 0.84rem;
+    white-space: normal;
+  }
+
+  .hero-section {
+    min-height: 560px;
+    padding: 66px 20px 74px;
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.84) 54%, rgba(255, 255, 255, 0.18) 100%),
+      url("./assets/earthly-cravings-hero-still-life.png");
+    background-position: 62% center;
+  }
+
+  h1 {
+    font-size: clamp(3.3rem, 17vw, 4.8rem);
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 12vw, 3.5rem);
+  }
+
+  .hero-actions,
+  .mini-list,
+  .product-shelf,
+  .product-gate,
+  .story-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    display: grid;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .image-panel,
+  .roots-visual {
+    min-height: 320px;
+  }
+
+  .story-strip article {
+    min-height: 160px;
+  }
+}

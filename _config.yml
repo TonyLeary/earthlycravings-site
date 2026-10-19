@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) settings.
+# Keep repository-only files out of the published site.
+exclude:
+  - README.md
+  - content-map.json
+  - netlify.toml
+  - vercel.json

@@ -780,3 +780,39 @@ h3 {
 .not-found-section .hero-actions {
   justify-content: center;
 }
+
+
+.legal-section {
+  max-width: 760px;
+  padding: clamp(58px, 8vw, 106px) clamp(20px, 6vw, 86px);
+}
+
+.legal-section h1 {
+  font-size: clamp(2.25rem, 5vw, 4.4rem);
+  line-height: 0.98;
+}
+
+.legal-section h2 {
+  margin-top: 36px;
+  margin-bottom: 14px;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.legal-section p,
+.legal-section li {
+  max-width: 640px;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.legal-section a {
+  color: var(--leaf);
+  font-weight: 700;
+}
+
+.legal-updated {
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

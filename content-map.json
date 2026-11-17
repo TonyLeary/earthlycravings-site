@@ -7,7 +7,7 @@
     "instagram": "https://www.instagram.com/earthlycravings3/",
     "assets": {
       "mark": "assets/earthly-cravings-mark.svg",
-      "hero": "assets/earthly-cravings-hero-still-life.png"
+      "hero": "assets/earthly-cravings-hero-still-life.jpg"
     }
   },
   "navigation": [
@@ -30,7 +30,7 @@
         { "label": "See products we use", "href": "#products" }
       ],
       "image": {
-        "src": "assets/earthly-cravings-hero-still-life.png",
+        "src": "assets/earthly-cravings-hero-still-life.jpg",
         "alt": "Fresh allergy-friendly food on a bright kitchen table"
       }
     },
